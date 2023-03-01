@@ -34,7 +34,7 @@ psymptoms = []
 global y6
 
 def show_pdf(viruscode):
-    st.markdown(f'<embed src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://github.com/anabeleex/virolab-interfaz/raw/main/Fichas/{viruscode}.pdf" width="700" height="1000">', unsafe_allow_html=True)
+    st.markdown(f'<embed src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://github.com/anabeleex/virolab-interfaz/raw/main/Fichas/{viruscode}.pdf" width="700" height="700">', unsafe_allow_html=True)
 
 
 def NaiveBayes():
