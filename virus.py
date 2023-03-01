@@ -33,11 +33,10 @@ y_test = df[["Id"]]
 psymptoms = []
 global y6
 
-def show_pdf(file_path):
-    with open(file_path,"rb") as f:
-          base64_pdf = base64.b64encode(f.read()).decode('utf-8')
-    pdf_display = f'<embed src="data:application/pdf;base64,{base64_pdf}" width="700" height="1000" type="application/pdf">'
+def show_pdf(viruscode):
+    pdf_display = f'<embed src="https://github.com/anabeleex/virolab-interfaz/blob/raw/Fichas/{viruscode}.pdf" width="700" height="1000" type="application/pdf">'
     st.markdown(pdf_display, unsafe_allow_html=True)
+
 
 def NaiveBayes():
     from sklearn.naive_bayes import GaussianNB
@@ -76,7 +75,7 @@ def NaiveBayes():
         for g in range(0,len(possible)):
             st.write("En base a los sintomas elegidos, la predicción principal es:")
             st.markdown("### ***" + y3[possible[g]] + " 🌱" +"***" )
-            show_pdf("Fichas/" + y4[possible[g]]+ ".pdf")
+            show_pdf(y4[possible[g]])
     #         t3.insert(END, y3[possible[g]])
             
     else:
@@ -158,7 +157,4 @@ elif submitted and not options:
 
 #st.write('You selected:', options)
 #def preprocess():
-
-
-
 
