@@ -76,7 +76,7 @@ def NaiveBayes():
         for g in range(0,len(possible)):
             st.write("En base a los sintomas elegidos, la predicción principal es:")
             st.markdown("### ***" + y3[possible[g]] + " 🌱" +"***" )
-            show_pdf("./Fichas/" + y4[possible[g]]+ ".pdf")
+            show_pdf("Fichas/" + y4[possible[g]]+ ".pdf")
     #         t3.insert(END, y3[possible[g]])
             
     else:
