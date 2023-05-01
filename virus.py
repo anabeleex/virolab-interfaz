@@ -105,7 +105,7 @@ with form:
         'Seleccione los síntomas presentados por su planta:',
         ["Manchas marrón oscuro en las hojas","Manchas verde oscuro/claro en las hojas","Manchas amarillas en las hojas","Deformación de la hoja","Clorosis","Coloración púrpura en las hojas","Presencia de anillos color verde en el fruto","Presencia de anillos color amarillo o decoloración en el fruto","Tamaño reducido del fruto","Se detiene el crecimiento de la planta","Pardeamiento del fruto","Enrollamiento de la hoja","Tallo con manchas color marrón","Disminución en el número de frutos","Deformación en el fruto","Necrosis"], help = "Escoja una opción...")
 
-    img = image_select("Modo de transmisión:", ["./utils/afidos.jpg", "./utils/trips.jpg", "./utils/nematodos.jpg","./utils/chicharrita.jpg","./utils/mosquitasb.jpg","./utils/propagacion.jpg","./utils/transmision.jpg","./utils/semillas.jpg","./utils/polen.jpg","./utils/abejorros.jpg","./utils/orosius.png"] ,captions=["Afidos", "Trips", "Nematodos","Chicharritas","Mosquitas blancas","Propagacion vegetativa","Transmision mecánica","Semillas","Polen","Abejorros","Orosius argentatus"])
+    img = image_select("Modo de transmisión:", ["./utils/afidos.jpg", "./utils/trips.jpg", "./utils/nematodos.jpg","./utils/chicharrita.jpg","./utils/mosquitasb.jpg","./utils/propagacion.jpg","./utils/transmision.jpg","./utils/semillas.jpg","./utils/polen.jpg","./utils/abejorros.jpg","./utils/orosius.png"] ,captions=["Áfidos", "Trips", "Nemátodos","Chicharritas","Mosquitas blancas","Propagación vegetativa","Transmisión mecánica","Semillas","Polen","Abejorros","Orosius argentatus"])
     
 
     submitted = st.form_submit_button(label="Calcular")
