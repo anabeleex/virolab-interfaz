@@ -9,6 +9,7 @@ import base64
 from streamlit_image_select import image_select
 import difflib
 import numpy
+from streamlit.components.v1 import html
 
 
 
@@ -35,6 +36,14 @@ X_test= df[l1]
 y_test = df[["Id"]]
 psymptoms = []
 global y6
+
+def open_page(url):
+    open_script= """
+        <script type="text/javascript">
+            window.open('%s', '_blank').focus();
+        </script>
+    """ % (url)
+    html(open_script)
 
 def show_pdf(viruscode):
     st.markdown(f'<embed src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://github.com/anabeleex/virolab-interfaz/raw/main/Fichas/{viruscode}.pdf" width="700" height="700">', unsafe_allow_html=True)
@@ -228,8 +237,8 @@ if submitted and options:
         show_pdf(y4[porcentajes_sorted[1][0]])
 
 
-
-    
+    st.write("Si desea consultar la información completa de todos los virus con sus síntomas correspondientes:")
+    st.button('Consultar', on_click=open_page, args=('https://drive.google.com/file/d/1_oS3ImYsfJWmMRuvvgMjXTDEeF1WFicG/view?usp=sharing',))
     #st.write("La distribución para la base de datos completa:")
     res = {}
     for key in range(0,len(X_test[psymptoms])):
