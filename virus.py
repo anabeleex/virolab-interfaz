@@ -24,7 +24,7 @@ l2=[]
 for i in range(0,len(l1)):
     l2.append(0)
 
-df=pd.read_csv("VIRUS3.csv")
+df=pd.read_csv("VIRUS2.csv")
 X= df[l1]
 y = df[["Id"]]
 np.ravel(y)
