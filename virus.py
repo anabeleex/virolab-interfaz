@@ -45,6 +45,18 @@ def open_page(url):
     """ % (url)
     html(open_script)
 
+def displayPDF(viruscode):
+    # Opening file from file path
+    file = viruscode+".pdf"
+    with open(file, "rb") as f:
+        base64_pdf = base64.b64encode(f.read()).decode('utf-8')
+
+    # Embedding PDF in HTML
+    pdf_display = F'<iframe src="data:application/pdf;base64,{base64_pdf}" width="700" height="1000" type="application/pdf"></iframe>'
+
+    # Displaying File
+    st.markdown(pdf_display, unsafe_allow_html=True)
+
 def show_pdf(viruscode):
     st.markdown(f'<embed src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://github.com/anabeleex/virolab-interfaz/raw/main/Fichas/{viruscode}.pdf" width="700" height="700">', unsafe_allow_html=True)
 
@@ -186,13 +198,13 @@ if submitted and options:
         col3.metric(y3[porcentajes_sorted[2][0]], numpy.format_float_positional(porcentajes_sorted[2][1]*100, precision = 2) + " %")
         st.write("En base a los sintomas elegidos, las predicciones principales son:")
         st.markdown("### ***" + y3[disease] + " 🌱" +"***" )
-        show_pdf(y4[disease])
+        displayPDF(y4[disease])
 
         st.markdown("### ***" + y3[porcentajes_sorted[1][0]] + " 🌱" +"***" )
-        show_pdf(y4[porcentajes_sorted[1][0]])
+        displayPDF(y4[porcentajes_sorted[1][0]])
 
         st.markdown("### ***" + y3[porcentajes_sorted[2][0]] + " 🌱" +"***" )
-        show_pdf(y4[porcentajes_sorted[2][0]])
+        displayPDF(y4[porcentajes_sorted[2][0]])
     elif(disease == porcentajes_sorted[1][0]):
         col1, col2, col3 = st.columns(3)
         col1.metric(y3[disease], numpy.format_float_positional(porcentajes_sorted[0][1]*100, precision = 2) + " %")
@@ -200,13 +212,13 @@ if submitted and options:
         col3.metric(y3[porcentajes_sorted[3][0]], numpy.format_float_positional(porcentajes_sorted[2][1]*100, precision = 2) + " %")
         st.write("En base a los sintomas elegidos, las predicciones principales son:")
         st.markdown("### ***" + y3[disease] + " 🌱" +"***" )
-        show_pdf(y4[disease])
+        displayPDF(y4[disease])
 
         st.markdown("### ***" + y3[porcentajes_sorted[2][0]] + " 🌱" +"***" )
-        show_pdf(y4[porcentajes_sorted[2][0]])
+        displayPDF(y4[porcentajes_sorted[2][0]])
 
         st.markdown("### ***" + y3[porcentajes_sorted[3][0]] + " 🌱" +"***" )
-        show_pdf(y4[porcentajes_sorted[3][0]])
+        displayPDF(y4[porcentajes_sorted[3][0]])
     elif(disease == porcentajes_sorted[2][0]):
         col1, col2, col3 = st.columns(3)
         col1.metric(y3[disease], numpy.format_float_positional(porcentajes_sorted[0][1]*100, precision = 2) + " %")
@@ -214,13 +226,13 @@ if submitted and options:
         col3.metric(y3[porcentajes_sorted[3][0]], numpy.format_float_positional(porcentajes_sorted[2][1]*100, precision = 2) + " %")
         st.write("En base a los sintomas elegidos, las predicciones principales son:")
         st.markdown("### ***" + y3[disease] + " 🌱" +"***" )
-        show_pdf(y4[disease])
+        displayPDF(y4[disease])
 
         st.markdown("### ***" + y3[porcentajes_sorted[1][0]] + " 🌱" +"***" )
-        show_pdf(y4[porcentajes_sorted[1][0]])
+        displayPDF(y4[porcentajes_sorted[1][0]])
 
         st.markdown("### ***" + y3[porcentajes_sorted[3][0]] + " 🌱" +"***" )
-        show_pdf(y4[porcentajes_sorted[3][0]])
+        displayPDF(y4[porcentajes_sorted[3][0]])
     else:
         col1, col2, col3 = st.columns(3)
         col1.metric(y3[disease], numpy.format_float_positional(porcentajes_sorted[0][1]*100, precision = 2) + " %")
@@ -228,13 +240,13 @@ if submitted and options:
         col3.metric(y3[porcentajes_sorted[1][0]], numpy.format_float_positional(porcentajes_sorted[2][1]*100, precision = 2) + " %")
         st.write("En base a los sintomas elegidos, las predicciones principales son:")
         st.markdown("### ***" + y3[disease] + " 🌱" +"***" )
-        show_pdf(y4[disease])
+        displayPDF(y4[disease])
 
         st.markdown("### ***" + y3[porcentajes_sorted[0][0]] + " 🌱" +"***" )
-        show_pdf(y4[porcentajes_sorted[0][0]])
+        displayPDF(y4[porcentajes_sorted[0][0]])
 
         st.markdown("### ***" + y3[porcentajes_sorted[1][0]] + " 🌱" +"***" )
-        show_pdf(y4[porcentajes_sorted[1][0]])
+        displayPDF(y4[porcentajes_sorted[1][0]])
 
 
     st.write("Si desea consultar la información completa de todos los virus con sus síntomas correspondientes:")
