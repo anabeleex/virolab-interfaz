@@ -198,13 +198,13 @@ if submitted and options:
         col3.metric(y3[porcentajes_sorted[2][0]], numpy.format_float_positional(porcentajes_sorted[2][1]*100, precision = 2) + " %")
         st.write("En base a los sintomas elegidos, las predicciones principales son:")
         st.markdown("### ***" + y3[disease] + " 🌱" +"***" )
-        displayPDF(y4[disease])
+        show_pdf(y4[disease])
 
         st.markdown("### ***" + y3[porcentajes_sorted[1][0]] + " 🌱" +"***" )
-        displayPDF(y4[porcentajes_sorted[1][0]])
+        show_pdf(y4[porcentajes_sorted[1][0]])
 
         st.markdown("### ***" + y3[porcentajes_sorted[2][0]] + " 🌱" +"***" )
-        displayPDF(y4[porcentajes_sorted[2][0]])
+        show_pdf(y4[porcentajes_sorted[2][0]])
     elif(disease == porcentajes_sorted[1][0]):
         col1, col2, col3 = st.columns(3)
         col1.metric(y3[disease], numpy.format_float_positional(porcentajes_sorted[0][1]*100, precision = 2) + " %")
@@ -212,13 +212,13 @@ if submitted and options:
         col3.metric(y3[porcentajes_sorted[3][0]], numpy.format_float_positional(porcentajes_sorted[2][1]*100, precision = 2) + " %")
         st.write("En base a los sintomas elegidos, las predicciones principales son:")
         st.markdown("### ***" + y3[disease] + " 🌱" +"***" )
-        displayPDF(y4[disease])
+        show_pdf(y4[disease])
 
         st.markdown("### ***" + y3[porcentajes_sorted[2][0]] + " 🌱" +"***" )
-        displayPDF(y4[porcentajes_sorted[2][0]])
+        show_pdf(y4[porcentajes_sorted[2][0]])
 
         st.markdown("### ***" + y3[porcentajes_sorted[3][0]] + " 🌱" +"***" )
-        displayPDF(y4[porcentajes_sorted[3][0]])
+        show_pdf(y4[porcentajes_sorted[3][0]])
     elif(disease == porcentajes_sorted[2][0]):
         col1, col2, col3 = st.columns(3)
         col1.metric(y3[disease], numpy.format_float_positional(porcentajes_sorted[0][1]*100, precision = 2) + " %")
@@ -226,13 +226,13 @@ if submitted and options:
         col3.metric(y3[porcentajes_sorted[3][0]], numpy.format_float_positional(porcentajes_sorted[2][1]*100, precision = 2) + " %")
         st.write("En base a los sintomas elegidos, las predicciones principales son:")
         st.markdown("### ***" + y3[disease] + " 🌱" +"***" )
-        displayPDF(y4[disease])
+        show_pdf(y4[disease])
 
         st.markdown("### ***" + y3[porcentajes_sorted[1][0]] + " 🌱" +"***" )
-        displayPDF(y4[porcentajes_sorted[1][0]])
+        show_pdf(y4[porcentajes_sorted[1][0]])
 
         st.markdown("### ***" + y3[porcentajes_sorted[3][0]] + " 🌱" +"***" )
-        displayPDF(y4[porcentajes_sorted[3][0]])
+        show_pdf(y4[porcentajes_sorted[3][0]])
     else:
         col1, col2, col3 = st.columns(3)
         col1.metric(y3[disease], numpy.format_float_positional(porcentajes_sorted[0][1]*100, precision = 2) + " %")
@@ -240,13 +240,13 @@ if submitted and options:
         col3.metric(y3[porcentajes_sorted[1][0]], numpy.format_float_positional(porcentajes_sorted[2][1]*100, precision = 2) + " %")
         st.write("En base a los sintomas elegidos, las predicciones principales son:")
         st.markdown("### ***" + y3[disease] + " 🌱" +"***" )
-        displayPDF(y4[disease])
+        show_pdf(y4[disease])
 
         st.markdown("### ***" + y3[porcentajes_sorted[0][0]] + " 🌱" +"***" )
-        displayPDF(y4[porcentajes_sorted[0][0]])
+        show_pdf(y4[porcentajes_sorted[0][0]])
 
         st.markdown("### ***" + y3[porcentajes_sorted[1][0]] + " 🌱" +"***" )
-        displayPDF(y4[porcentajes_sorted[1][0]])
+        show_pdf(y4[porcentajes_sorted[1][0]])
 
 
     st.write("Si desea consultar la información completa de todos los virus con sus síntomas correspondientes:")
