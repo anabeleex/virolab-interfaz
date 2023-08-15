@@ -154,7 +154,7 @@ st.title("Sistema de Aproximación de Virus de Plantas de Tomate")
 st.markdown("### Centro de Investigación Científica y de Educación Superior de Ensenada")
 st.caption("Hecho por: Anabelee Ochoa Ritchie, Supervisado por: Dra. Jimena Carrillo Tripp")
 
-
+st.markdown(f'<embed src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://github.com/anabeleex/virolab-interfaz/raw/main/Sintomas.pdf" width="700" height="700">', unsafe_allow_html=True)
 
 form = st.form(key="annotation")
 with form:
