@@ -144,7 +144,7 @@ with form:
         'Seleccione los síntomas presentados por su planta:',
         ["Manchas marrón oscuro en las hojas","Manchas verde oscuro/claro en las hojas","Manchas amarillas en las hojas","Deformación de la hoja","Clorosis","Coloración púrpura en las hojas","Presencia de anillos color verde en el fruto","Presencia de anillos color amarillo o decoloración en el fruto","Tamaño reducido del fruto","Se detiene el crecimiento de la planta","Pardeamiento del fruto","Enrollamiento de la hoja","Tallo con manchas color marrón","Disminución en el número de frutos","Deformación en el fruto","Necrosis"], help = "Escoja una opción...")
 
-    submitted2 = st.form_submit_button(label="Conozco el modo de transmisión")
+    submitted2 = st.form_submit_button(label="Otros datos importantes sobre el posible método de transmisión")
     submitted3 = st.form_submit_button(label="No lo conozco")
 
     if submitted2:
@@ -249,7 +249,7 @@ if submitted and options:
         show_pdf(y4[porcentajes_sorted[1][0]])
 
 
-    st.write("Si desea consultar la información completa de todos los virus con sus síntomas correspondientes:")
+    st.write("Si desea consultar todas las Fichas Técnicas:")
     st.button('Consultar', on_click=open_page, args=('https://drive.google.com/file/d/1_oS3ImYsfJWmMRuvvgMjXTDEeF1WFicG/view?usp=sharing',))
     #st.write("La distribución para la base de datos completa:")
     res = {}
