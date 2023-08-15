@@ -249,6 +249,7 @@ if submitted and options:
         show_pdf(y4[porcentajes_sorted[1][0]])
 
 
+    st.write("Esta interfaz sólo es una aproximación, para resultados más exactos, contactarse con el Laboratorio de Virología del CICESE.") 
     st.write("Si desea consultar todas las Fichas Técnicas:")
     st.button('Consultar', on_click=open_page, args=('https://drive.google.com/file/d/1_oS3ImYsfJWmMRuvvgMjXTDEeF1WFicG/view?usp=sharing',))
     #st.write("La distribución para la base de datos completa:")
